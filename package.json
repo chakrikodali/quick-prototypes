@@ -1,0 +1,21 @@
+{
+	"name": "flite-oauth-client",
+	"description": "OAuth 1.0 client for flite",
+	"version": "0.0.1",
+	"author": "Flite Inc",
+	"contributors": [{
+		"name": "Chakri Kodali",
+		"email": "chakri@flite.com"
+	}],
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+		"express": "*",
+		"ejs": "*"
+	},
+	"engines": {
+		"node": ">=0.8.0"
+	}
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			.bookmark {
+
+			}
+			.innerCircle {
+				width: 9px;
+				height: 9px;
+				-webkit-border-radius: 25px;
+				-moz-border-radius: 25px;
+				border-radius: 25px; 
+				background-color: black;
+				margin: 2px 0px 0px 2px;
+			}
+			.circle {
+				width: 13px;
+				height: 13px;
+				-webkit-border-radius: 25px;
+				-moz-border-radius: 25px;
+				border-radius: 25px; 
+				border: 2px solid black;
+			}
+			.closeIcon {
+				background: url('/close.png') no-repeat center center;
+				width: 29px;
+				height: 29px;
+				top: -10px;
+				left: 145px;
+				position: absolute;
+			}
+			.ui-tooltip a {
+				color: white;
+				text-decoration: none;
+			}
+
+
+			.ui-tooltip, .arrow:after {
+			    background: black;
+			    border: 2px solid white;
+			  }
+			  .ui-tooltip {
+			    padding: 10px 20px;
+			    color: white;
+			    border-radius: 20px;
+			    font: bold 14px "Helvetica Neue", Sans-Serif;
+			    text-transform: uppercase;
+			    box-shadow: 0 0 7px black;
+			  }
+			  .arrow {
+			    width: 70px;
+			    height: 16px;
+			    overflow: hidden;
+			    position: absolute;
+			    left: 50%;
+			    margin-left: -35px;
+			    bottom: -16px;
+			  }
+			  .arrow.top {
+			    top: -16px;
+			    bottom: auto;
+			  }
+			  .arrow.left {
+			    left: 20%;
+			  }
+			  .arrow:after {
+			    content: "";
+			    position: absolute;
+			    left: 20px;
+			    top: -20px;
+			    width: 25px;
+			    height: 25px;
+			    box-shadow: 6px 5px 9px -9px black;
+			    -webkit-transform: rotate(45deg);
+			    -moz-transform: rotate(45deg);
+			    -ms-transform: rotate(45deg);
+			    -o-transform: rotate(45deg);
+			    tranform: rotate(45deg);
+			  }
+			  .arrow.top:after {
+			    bottom: -20px;
+			    top: auto;
+			  }			
+		</style>
+	</head>
+	<body>
+<!-- 		<a class="bookmark" onclick="return false;" href="javascript:void((function(){var s=document.createElement('script');s.setAttribute('src', '//localhost:1338/app.js'); s.setAttribute('type', 'text/javascript'); document.getElementsByTagName('body')[0].appendChild(s)})())">ADD TO BOOKMARK BAR</a>
+ -->
+
+		<img class="tagEdit" src="/test.jpg"></img>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+		<script type="text/javascript" src="/tagging.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				if (window.location.hash === '#edit') {
+					$('.tagEdit').tagIt();
+				} else {
+					$('.tagEdit').tagIt({tags: [{x:400, y: 470}, {x:260, y: 455}]});
+
+				} 
+				
+			});
+		</script>
+	</body>
+</html>
